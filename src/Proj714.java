@@ -8,7 +8,7 @@ public class Proj714 {
         System.out.println(d(new BigInteger("3170")));
 
 
-        /*BigInteger k = new BigInteger("50000").add(BigInteger.ONE);
+       /* BigInteger k = new BigInteger("50000").add(BigInteger.ONE);
         BigInteger sum = BigInteger.ZERO;
         for (BigInteger x = new BigInteger("3100"); !x.equals(k); x = x.add(BigInteger.ONE)) {
             System.out.println(x);
