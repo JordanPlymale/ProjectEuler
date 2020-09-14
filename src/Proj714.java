@@ -8,9 +8,9 @@ public class Proj714 {
         System.out.println(d(new BigInteger("3170")));
 
 
-       /* BigInteger k = new BigInteger("50000").add(BigInteger.ONE);
+        /*BigInteger k = new BigInteger("50000").add(BigInteger.ONE);
         BigInteger sum = BigInteger.ZERO;
-        for (BigInteger x = new BigInteger("3100"); !x.equals(k); x = x.add(BigInteger.ONE)) {
+        for (BigInteger x = new BigInteger("1"); !x.equals(k); x = x.add(BigInteger.ONE)) {
             System.out.println(x);
             sum = sum.add(d(x));
         }
@@ -19,7 +19,7 @@ public class Proj714 {
     }
 
     private static BigInteger d(BigInteger n) {
-        BigInteger multiple = new BigInteger("1");
+        BigInteger multiple = new BigInteger("310000000000");
         while (true) {
             if (isDuoDigit(n.multiply(multiple))){
                 System.out.println(multiple);
@@ -50,6 +50,7 @@ public class Proj714 {
                         multiple = multiple.divide(BigInteger.TEN.pow(factor));
                         multiple = multiple.add(BigInteger.ONE);
                         multiple = multiple.multiply(BigInteger.TEN.pow(factor));
+                        //System.out.println("multiple after skipping: " + multiple);
                     } else {
                         //if the first three ARE duodigits, then we increment by 1 as to not pass the answer
                         multiple = multiple.add(BigInteger.ONE);
@@ -59,7 +60,7 @@ public class Proj714 {
                 //if mult is less than 6 digits we just add one until it is over 5 digits
                 multiple = multiple.add(BigInteger.ONE);
             }
-            //System.out.println(multiple.intValue());
+            System.out.println("multiple: "+ multiple);
 
         }
     }
